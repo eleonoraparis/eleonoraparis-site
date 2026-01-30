@@ -22,7 +22,7 @@ body {
   max-width: 600px;
 }
 
-/* Nome */
+/* Primo paragrafo: Nome */
 .name {
   font-size: 15px;
   letter-spacing: 1px;
@@ -30,7 +30,7 @@ body {
   margin-bottom: 1.6em;
 }
 
-/* Ruolo + email */
+/* Secondo paragrafo: Ruolo + email */
 .role-email {
   display: flex;
   flex-direction: column;
@@ -42,7 +42,7 @@ body {
   white-space: nowrap;
 }
 
-/* CV */
+/* Terzo paragrafo: CV */
 .cv {
   display: none;
   max-width: 600px;
@@ -66,16 +66,25 @@ body {
 @media (hover: none) and (pointer: coarse) {
 
   body {
-    padding: 0;
+    padding: 20px;  /* margine generale */
   }
 
   .container {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;   /* centro verticale */
-    align-items: center;       /* centro orizzontale */
-    padding: 20px;
+    min-height: auto;   /* non centro verticale */
+    display: block;     /* niente flex */
+  }
+
+  /* FONT FISSI, alto a sinistra */
+  .name {
+    font-size: 15px;  
+    margin-bottom: 1.6em;
+    text-align: left;
+  }
+
+  .details,
+  .role-email div,
+  .cv {
+    font-size: 14px;   /* fisso */
   }
 
   .name,
@@ -83,11 +92,7 @@ body {
   .cv {
     width: 100%;
     max-width: 320px;          /* “pagina bianca” */
-    text-align: left;
-  }
-
-  .cv {
-    max-width: 320px;
+    text-align: left;           /* sempre alto a sinistra */
   }
 
   .about {
@@ -96,3 +101,5 @@ body {
     font-size: 13px;
   }
 }
+
+
