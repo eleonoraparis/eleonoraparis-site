@@ -8,18 +8,23 @@
 /* ------------------ BASE (DESKTOP) ------------------ */
 body {
   margin: 0;
-  min-height: 100vh;
+  padding: 0;           /* niente padding esterno */
+  overflow: hidden;     /* blocca scroll verticale e laterale */
+  height: 100vh;        /* altezza viewport */
+  width: 100vw;         /* larghezza viewport */
   background-color: white;
   color: black;
   font-family: "Gotham", sans-serif;
   font-size: 14px;
   line-height: 1.2;
-  padding: 40px;
 }
 
 .container {
   text-align: left;
-  max-width: 600px;
+  max-width: 680px;
+  margin: 0;            /* nessun margine esterno */
+  padding: 40px;        /* padding interno */
+  box-sizing: border-box;
 }
 
 /* Primo paragrafo: Nome */
@@ -42,10 +47,10 @@ body {
   white-space: nowrap;
 }
 
-/* Terzo paragrafo: CV */
+/* Terzo paragrafo: CV (rimane com’era) */
 .cv {
   display: none;
-  max-width: 600px;
+  max-width: 680px;
   width: 100%;
   white-space: normal;
   font-size: 14px;
@@ -62,19 +67,21 @@ body {
   font-family: 'Gotham', sans-serif;
 }
 
-/* ------------------ MOBILE & TABLET (TOUCH REALI) ------------------ */
+/* ------------------ MOBILE & TABLET ------------------ */
 @media (hover: none) and (pointer: coarse) {
 
   body {
-    padding: 20px 20px 0 20px; /* 20px sopra, sx e dx, 0 sotto */
+    padding: 0;         /* niente padding esterno */
+    overflow: hidden;   /* blocca scroll mobile */
   }
 
   .container {
-    display: block;        /* niente flex */
+    display: block;
     width: 100%;
-    max-width: 320px;      /* “pagina bianca” */
-    margin: 0;             /* forza in alto a sinistra */
-    text-align: left;      /* allineamento a sinistra */
+    max-width: 320px;
+    margin: 0;
+    padding: 20px;      /* padding interno ridotto */
+    box-sizing: border-box;
   }
 
   .name {
@@ -94,3 +101,4 @@ body {
     font-size: 13px;
   }
 }
+
