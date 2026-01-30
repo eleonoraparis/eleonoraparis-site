@@ -8,12 +8,14 @@
 body {
   margin: 0;
   min-height: 100vh;
-  overflow: hidden;            /* nessuna barra di scorrimento */
+  overflow: hidden;            /* ← unica correzione */
+  justify-content: flex-start; /* in alto a sx */
+  align-items: flex-start;
   padding: 40px;
   background-color: white;
   color: black;
   font-family: "Gotham", sans-serif;
-  font-size: 14px;             /* dimensione base per desktop e mobile */
+  font-size: 14px;
   line-height: 1.2;
 }
 
@@ -25,7 +27,7 @@ body {
 
 /* Primo paragrafo: nome */
 .name {
-  font-size: 14px;             /* stesso font e dimensione di tutto il testo */
+  font-size: 15px;
   letter-spacing: 1px;
   cursor: pointer;
   margin-bottom: 1.6em;
@@ -57,38 +59,63 @@ body {
 /* About in basso a destra */
 .about {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  font-size: 14px;             /* stesso font size del resto */
+  bottom: 30px;
+  right: 30px;
+  font-size: 14px;
   cursor: pointer;
   font-family: 'Gotham', sans-serif;
 }
 
-/* ----------------------------
-   MEDIA QUERY PER CELLPHONE / TABLET
------------------------------ */
-@media (max-width: 600px) {
+/* =========================
+   RESPONSIVE – MOBILE / TABLET
+   ========================= */
+
+@media (max-width: 1024px) {
+
   body {
-    padding: 20px;             /* meno padding su smartphone */
+    padding: 20px;
+    height: calc(var(--vh, 1vh) * 100)
+    min-height: 100dvh;
+    overflow: hidden;
+
+    /* testo più grande (voluto) */
+    font-size: 16px;
+    line-height: 1.25;
+  }
+
+  .container {
+    max-width: 100%;
+  }
+
+  .name {
+    font-size: 17px;
   }
 
   .cv {
-    max-width: 100%;           /* CV si adatta allo schermo */
-    width: 100%;
+    max-width: 100%;
+  }
+
+  .role-email div {
+    white-space: normal;
   }
 
   .about {
-    font-size: 14px;           /* About grande e leggibile */
+    bottom: 16px;
+    right: 16px;
+    font-size: 12px;
   }
 }
 
-@media (min-width: 601px) and (max-width: 1024px) {
+/* Telefoni piccoli */
+@media (max-width: 480px) {
+
   body {
-    padding: 30px;             /* tablet */
+    padding: 16px;
   }
 
-  .cv {
-    max-width: 500px;
-    width: 100%;
+  .name {
+    margin-bottom: 1.4em;
   }
 }
+
+
