@@ -5,24 +5,27 @@
   font-style: normal;
 }
 
-/* ------------------ BASE (DESKTOP) ------------------ */
 body {
   margin: 0;
   min-height: 100vh;
+  overflow: hidden;            /* ← unica correzione */
+  justify-content: flex-start; /* in alto a sx */
+  align-items: flex-start;
+  padding: 40px;
   background-color: white;
   color: black;
   font-family: "Gotham", sans-serif;
   font-size: 14px;
   line-height: 1.2;
-  padding: 40px;
 }
 
+/* Container principale */
 .container {
   text-align: left;
-  max-width: 600px;
+  font-family: inherit;
 }
 
-/* Primo paragrafo: Nome */
+/* Primo paragrafo: nome */
 .name {
   font-size: 15px;
   letter-spacing: 1px;
@@ -30,7 +33,7 @@ body {
   margin-bottom: 1.6em;
 }
 
-/* Secondo paragrafo: Ruolo + email */
+/* Secondo paragrafo: Architetto + email */
 .role-email {
   display: flex;
   flex-direction: column;
@@ -48,11 +51,12 @@ body {
   max-width: 600px;
   width: 100%;
   white-space: normal;
+  font-family: inherit;
   font-size: 14px;
   line-height: 1.2;
 }
 
-/* About */
+/* About in basso a destra */
 .about {
   position: fixed;
   bottom: 30px;
@@ -62,36 +66,71 @@ body {
   font-family: 'Gotham', sans-serif;
 }
 
-/* ------------------ MOBILE & TABLET (TOUCH REALI) ------------------ */
-@media (hover: none) and (pointer: coarse) {
-
+/* --- Tablet e smartphone --- */
+@media (max-width: 1024px) {
   body {
-    padding: 20px 20px 0 20px; /* 20px sopra, sx e dx, 0 sotto */
+    padding: 20px;
   }
 
-  .container {
-    display: block;        /* niente flex */
-    width: 100%;
-    max-width: 320px;      /* “pagina bianca” */
-    margin: 0;             /* forza in alto a sinistra */
-    text-align: left;      /* allineamento a sinistra */
+  /* Primo paragrafo in alto a sinistra */
+  .name {
+    font-size: 16px;
+    text-align: left; /* sempre in alto a sinistra */
+    margin-bottom: 0.5em;
+  }
+
+  /* Secondo paragrafo sotto nome, posizione fissa relativa */
+  .role-email {
+    text-align: left;
+    margin-bottom: 1em;
+  }
+
+  /* CV nascosto inizialmente */
+  .cv {
+    max-width: 100%;
+    font-size: 14px;
+    line-height: 1.3;
+    display: none; /* appare solo cliccando about */
+  }
+
+  /* About in basso a destra */
+  .about {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    font-size: 13px;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 15px;
   }
 
   .name {
-    font-size: 15px;
-    margin-bottom: 1.6em;
+    font-size: 14px;
+    text-align: left;
+    margin-bottom: 0.5em;
   }
 
-  .details,
-  .role-email div,
+  .role-email {
+    text-align: left;
+    margin-bottom: 0.5em;
+  }
+
   .cv {
-    font-size: 14px;
+    font-size: 13px;
+    line-height: 1.3;
+    max-width: 100%;
   }
 
   .about {
-    bottom: 20px;
-    right: 20px;
-    font-size: 13px;
+    bottom: 10px;
+    right: 10px;
+    font-size: 12px;
   }
 }
+
+
 
