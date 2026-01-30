@@ -66,33 +66,27 @@ body {
 @media (hover: none) and (pointer: coarse) {
 
   body {
-    padding: 20px;  /* margine generale */
+    padding: 20px;
   }
 
   .container {
-    min-height: auto;   /* non centro verticale */
-    display: block;     /* niente flex */
+    min-height: auto;
+    display: block;
+    width: 100%;        /* occuperà tutta la larghezza */
+    max-width: 320px;   /* “pagina bianca” */
+    margin: 0;          /* forza allineamento a sinistra */
+    text-align: left;   /* alto a sinistra */
   }
 
-  /* FONT FISSI, alto a sinistra */
   .name {
-    font-size: 15px;  
+    font-size: 15px;
     margin-bottom: 1.6em;
-    text-align: left;
   }
 
   .details,
   .role-email div,
   .cv {
-    font-size: 14px;   /* fisso */
-  }
-
-  .name,
-  .details,
-  .cv {
-    width: 100%;
-    max-width: 320px;          /* “pagina bianca” */
-    text-align: left;           /* sempre alto a sinistra */
+    font-size: 14px;
   }
 
   .about {
@@ -101,5 +95,3 @@ body {
     font-size: 13px;
   }
 }
-
-
