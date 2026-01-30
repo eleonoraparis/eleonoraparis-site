@@ -8,14 +8,12 @@
 body {
   margin: 0;
   min-height: 100vh;
-  overflow: hidden;          /* niente scrollbar */
-  justify-content: flex-start; /* in alto a sx */
-  align-items: flex-start;
+  overflow: hidden;            /* nessuna barra di scorrimento */
   padding: 40px;
   background-color: white;
   color: black;
   font-family: "Gotham", sans-serif;
-  font-size: 14px;
+  font-size: 14px;             /* dimensione base per desktop e mobile */
   line-height: 1.2;
 }
 
@@ -27,7 +25,7 @@ body {
 
 /* Primo paragrafo: nome */
 .name {
-  font-size: 15px;
+  font-size: 14px;             /* stesso font e dimensione di tutto il testo */
   letter-spacing: 1px;
   cursor: pointer;
   margin-bottom: 1.6em;
@@ -61,7 +59,7 @@ body {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  font-size: 11px;
+  font-size: 14px;             /* stesso font size del resto */
   cursor: pointer;
   font-family: 'Gotham', sans-serif;
 }
@@ -71,31 +69,26 @@ body {
 ----------------------------- */
 @media (max-width: 600px) {
   body {
-    font-size: 16px;       /* font più leggibile su smartphone */
-    padding: 20px;         /* meno padding ai bordi */
+    padding: 20px;             /* meno padding su smartphone */
   }
 
   .cv {
-    max-width: 100%;       /* CV si adatta allo schermo */
+    max-width: 100%;           /* CV si adatta allo schermo */
     width: 100%;
   }
 
   .about {
-    font-size: 12px;       /* About leggermente più grande su mobile */
+    font-size: 14px;           /* About grande e leggibile */
   }
 }
 
 @media (min-width: 601px) and (max-width: 1024px) {
   body {
-    font-size: 15px;       /* tablet: leggermente più grande del desktop */
-    padding: 30px;
+    padding: 30px;             /* tablet */
   }
 
   .cv {
-    max-width: 500px;      /* CV leggermente più stretto sui tablet */
+    max-width: 500px;
     width: 100%;
   }
 }
-
-
-
