@@ -78,16 +78,25 @@ body {
     padding: 20px;
   }
 
+  /* FONT FISSI: non cambia mai in orizzontale/verticale */
+  .name {
+    font-size: 15px;   /* fisso */
+    margin-bottom: 1.6em;
+    text-align: left;
+  }
+
+  .details,
+  .role-email div,
+  .cv {
+    font-size: 14px;   /* fisso */
+  }
+
   .name,
   .details,
   .cv {
     width: 100%;
     max-width: 320px;          /* “pagina bianca” */
     text-align: left;
-  }
-
-  .cv {
-    max-width: 320px;
   }
 
   .about {
