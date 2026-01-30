@@ -66,16 +66,15 @@ body {
 @media (hover: none) and (pointer: coarse) {
 
   body {
-    padding: 20px;
+    padding: 20px 20px 0 20px; /* 20px sopra, sx e dx, 0 sotto */
   }
 
   .container {
-    min-height: auto;
-    display: block;
-    width: 100%;        /* occuperà tutta la larghezza */
-    max-width: 320px;   /* “pagina bianca” */
-    margin: 0;          /* forza allineamento a sinistra */
-    text-align: left;   /* alto a sinistra */
+    display: block;        /* niente flex */
+    width: 100%;
+    max-width: 320px;      /* “pagina bianca” */
+    margin: 0;             /* forza in alto a sinistra */
+    text-align: left;      /* allineamento a sinistra */
   }
 
   .name {
@@ -95,3 +94,4 @@ body {
     font-size: 13px;
   }
 }
+
