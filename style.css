@@ -5,27 +5,24 @@
   font-style: normal;
 }
 
+/* ------------------ BASE (DESKTOP) ------------------ */
 body {
   margin: 0;
   min-height: 100vh;
-  overflow: hidden;            /* ← unica correzione */
-  justify-content: flex-start; /* in alto a sx */
-  align-items: flex-start;
-  padding: 40px;
   background-color: white;
   color: black;
   font-family: "Gotham", sans-serif;
   font-size: 14px;
   line-height: 1.2;
+  padding: 40px;
 }
 
-/* Container principale */
 .container {
   text-align: left;
-  font-family: inherit;
+  max-width: 600px;
 }
 
-/* Primo paragrafo: nome */
+/* Nome */
 .name {
   font-size: 15px;
   letter-spacing: 1px;
@@ -33,7 +30,7 @@ body {
   margin-bottom: 1.6em;
 }
 
-/* Secondo paragrafo: Architetto + email */
+/* Ruolo + email */
 .role-email {
   display: flex;
   flex-direction: column;
@@ -45,18 +42,17 @@ body {
   white-space: nowrap;
 }
 
-/* Terzo paragrafo: CV */
+/* CV */
 .cv {
   display: none;
   max-width: 600px;
   width: 100%;
   white-space: normal;
-  font-family: inherit;
   font-size: 14px;
   line-height: 1.2;
 }
 
-/* About in basso a destra */
+/* About */
 .about {
   position: fixed;
   bottom: 30px;
@@ -66,56 +62,37 @@ body {
   font-family: 'Gotham', sans-serif;
 }
 
-/* =========================
-   RESPONSIVE – MOBILE / TABLET
-   ========================= */
-
-@media (max-width: 1024px) {
+/* ------------------ MOBILE & TABLET (TOUCH REALI) ------------------ */
+@media (hover: none) and (pointer: coarse) {
 
   body {
-    padding: 20px;
-    height: calc(var(--vh, 1vh) * 100)
-    min-height: 100dvh;
-    overflow: hidden;
-
-    /* testo più grande (voluto) */
-    font-size: 16px;
-    line-height: 1.25;
+    padding: 0;
   }
 
   .container {
-    max-width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   /* centro verticale */
+    align-items: center;       /* centro orizzontale */
+    padding: 20px;
   }
 
-  .name {
-    font-size: 17px;
+  .name,
+  .details,
+  .cv {
+    width: 100%;
+    max-width: 320px;          /* “pagina bianca” */
+    text-align: left;
   }
 
   .cv {
-    max-width: 100%;
-  }
-
-  .role-email div {
-    white-space: normal;
+    max-width: 320px;
   }
 
   .about {
-    bottom: 16px;
-    right: 16px;
-    font-size: 12px;
+    bottom: 20px;
+    right: 20px;
+    font-size: 13px;
   }
 }
-
-/* Telefoni piccoli */
-@media (max-width: 480px) {
-
-  body {
-    padding: 16px;
-  }
-
-  .name {
-    margin-bottom: 1.4em;
-  }
-}
-
-
