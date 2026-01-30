@@ -66,23 +66,19 @@ body {
 @media (hover: none) and (pointer: coarse) {
 
   body {
-    padding: 0;
+    padding: 20px;  /* margine uniforme */
   }
 
   .container {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;   /* centro verticale */
-    align-items: center;       /* centro orizzontale */
-    padding: 20px;
+    min-height: auto;   /* rimuove centratura verticale */
+    display: block;     /* non flex */
   }
 
-  /* FONT FISSI: non cambia mai in orizzontale/verticale */
+  /* FONT FISSI */
   .name {
-    font-size: 15px;   /* fisso */
+    font-size: 15px;  
     margin-bottom: 1.6em;
-    text-align: left;
+    text-align: left;  /* sempre alto a sinistra */
   }
 
   .details,
@@ -95,8 +91,8 @@ body {
   .details,
   .cv {
     width: 100%;
-    max-width: 320px;          /* “pagina bianca” */
-    text-align: left;
+    max-width: 320px;  /* “pagina bianca” */
+    text-align: left;  /* sempre a sx */
   }
 
   .about {
