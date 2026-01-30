@@ -78,7 +78,7 @@ body {
   .container {
     display: block;
     width: 100%;
-    max-width: 320px;
+    max-width: 340px;
     margin: 0;
     padding: 20px;      /* padding interno ridotto */
     box-sizing: border-box;
