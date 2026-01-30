@@ -11,3 +11,4 @@ const cvContent = document.getElementById("cvContent");
 aboutClick.addEventListener("click", function() {
   cvContent.style.display = cvContent.style.display === "block" ? "none" : "block";
 });
+
