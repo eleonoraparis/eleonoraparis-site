@@ -66,33 +66,28 @@ body {
 @media (hover: none) and (pointer: coarse) {
 
   body {
-    padding: 20px;  /* margine uniforme */
+    padding: 0;
   }
 
   .container {
-    min-height: auto;   /* rimuove centratura verticale */
-    display: block;     /* non flex */
-  }
-
-  /* FONT FISSI */
-  .name {
-    font-size: 15px;  
-    margin-bottom: 1.6em;
-    text-align: left;  /* sempre alto a sinistra */
-  }
-
-  .details,
-  .role-email div,
-  .cv {
-    font-size: 14px;   /* fisso */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   /* centro verticale */
+    align-items: center;       /* centro orizzontale */
+    padding: 20px;
   }
 
   .name,
   .details,
   .cv {
     width: 100%;
-    max-width: 320px;  /* “pagina bianca” */
-    text-align: left;  /* sempre a sx */
+    max-width: 320px;          /* “pagina bianca” */
+    text-align: left;
+  }
+
+  .cv {
+    max-width: 320px;
   }
 
   .about {
