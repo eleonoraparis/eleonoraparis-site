@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'OPTIAmericanGothic-Bold';
-  src: url('OPTIAmericanGothic-Bold.otf') format('opentype');
+  font-family: 'Gotham';
+  src: url('Gotham-Medium.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
@@ -11,110 +11,100 @@ body {
   min-height: 100vh;
   background-color: white;
   color: black;
-  font-family: "OPTIAmericanGothic-Bold", sans-serif;
-  font-size: 10px;
+  font-family: "Gotham", sans-serif;
+  font-size: 14px;
   line-height: 1.2;
-}
-
-* {
-  box-sizing: border-box;
+  padding: 40px;
 }
 
 .container {
   text-align: left;
-  max-width: 800px;
-  margin: 0;
-  padding: 40px;
+  max-width: 600px;
 }
 
 /* Nome */
 .name {
-  font-size: 9.9px;
-  letter-spacing: 1.6px;
+  font-size: 15px;
+  letter-spacing: 1px;
+  cursor: pointer;
   margin-bottom: 1.6em;
 }
 
-/* Descrizione */
-.details {
-  font-size: 10px;
-  letter-spacing: 1.6px;
+/* Ruolo + email */
+.role-email {
+  display: flex;
+  flex-direction: column;
   line-height: 1.2;
   margin-bottom: 1.6em;
 }
 
-/* CV – DESKTOP */
-.cv {
-  font-size: 10px;
-  letter-spacing: 1.6px;
-  line-height: 1.4;
-  max-width: 760px;
-  width: 100%;
-  white-space: normal;
-  text-align: left;
-  hyphens: none;
-  word-break: normal;
-  overflow-wrap: normal;
+.role-email div {
+  white-space: nowrap;
 }
 
-/* ------------------ MOBILE (VERTICALE) ------------------ */
+/* CV */
+.cv {
+  display: none;
+  max-width: 600px;
+  width: 100%;
+  white-space: normal;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+/* About */
+.about {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  font-size: 14px;
+  cursor: pointer;
+  font-family: 'Gotham', sans-serif;
+}
+
+/* ------------------ MOBILE (TOUCH) ------------------ */
 @media (hover: none) and (pointer: coarse) {
 
   body {
-    padding: 0;
-    overflow-x: hidden;
+    padding: 20px 20px 0 20px;
   }
 
   .container {
     width: 100%;
-    max-width: 340px;   /* pagina bianca */
+    max-width: 320px;   /* pagina bianca */
     margin: 0;
-    padding: 20px;
+    text-align: left;
   }
 
   .name {
-    font-size: 6.4px;
+    font-size: 13px;
     margin-bottom: 1.6em;
-    text-align: left;
   }
 
-  .details {
-    font-size: 6.5px;
-    text-align: left;
+  .details,
+  .role-email div {
+    font-size: 12px;
   }
 
+  /* CV — VERTICALE */
   .cv {
-    font-size: 6.5px;
-    width: calc(100vw - 40px);
-    max-width: none;
-    text-align: left;
-    hyphens: none;
-    word-break: normal;
-    overflow-wrap: normal;
+    font-size: 12px;
+    width: calc(100vw - 40px); /* tutta la larghezza reale */
+    max-width: none;          /* FONDAMENTALE */
+  }
+
+  .about {
+    bottom: 20px;
+    right: 20px;
+    font-size: 12px;
   }
 }
 
 /* ------------------ MOBILE ORIZZONTALE ------------------ */
 @media (hover: none) and (pointer: coarse) and (orientation: landscape) {
 
-  .name {
-    font-size: 7.9px;
-    text-align: left;
-  }
-
-  .details {
-    font-size: 8px;
-    text-align: left;
-  }
-
   .cv {
-    font-size: 8px;
-    width: calc(100vw - 40px);
+    width: calc(50vw - 40px); /* circa metà schermo */
     max-width: none;
-    text-align: left;
-    hyphens: none;
-    word-break: normal;
-    overflow-wrap: normal;
   }
 }
-
-
