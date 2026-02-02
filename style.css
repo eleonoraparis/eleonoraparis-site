@@ -77,18 +77,18 @@ body {
   }
 
   .name {
-    font-size: 15px;
+    font-size: 13px;
     margin-bottom: 1.6em;
   }
 
   .details,
   .role-email div {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   /* CV — VERTICALE */
   .cv {
-    font-size: 14px;
+    font-size: 12px;
     width: calc(100vw - 40px); /* tutta la larghezza reale */
     max-width: none;          /* FONDAMENTALE */
   }
@@ -96,7 +96,7 @@ body {
   .about {
     bottom: 20px;
     right: 20px;
-    font-size: 13px;
+    font-size: 12px;
   }
 }
 
