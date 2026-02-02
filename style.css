@@ -22,7 +22,7 @@ body {
   max-width: 600px;
 }
 
-/* Primo paragrafo: Nome */
+/* Nome */
 .name {
   font-size: 15px;
   letter-spacing: 1px;
@@ -30,7 +30,7 @@ body {
   margin-bottom: 1.6em;
 }
 
-/* Secondo paragrafo: Ruolo + email */
+/* Ruolo + email */
 .role-email {
   display: flex;
   flex-direction: column;
@@ -42,7 +42,7 @@ body {
   white-space: nowrap;
 }
 
-/* Terzo paragrafo: CV */
+/* CV */
 .cv {
   display: none;
   max-width: 600px;
@@ -62,19 +62,18 @@ body {
   font-family: 'Gotham', sans-serif;
 }
 
-/* ------------------ MOBILE & TABLET (TOUCH REALI) ------------------ */
+/* ------------------ MOBILE (TOUCH) ------------------ */
 @media (hover: none) and (pointer: coarse) {
 
   body {
-    padding: 20px 20px 0 20px; /* 20px sopra, sx e dx, 0 sotto */
+    padding: 20px 20px 0 20px;
   }
 
   .container {
-    display: block;        /* niente flex */
     width: 100%;
-    max-width: 320px;      /* “pagina bianca” */
-    margin: 0;             /* forza in alto a sinistra */
-    text-align: left;      /* allineamento a sinistra */
+    max-width: 320px;   /* pagina bianca */
+    margin: 0;
+    text-align: left;
   }
 
   .name {
@@ -83,9 +82,15 @@ body {
   }
 
   .details,
-  .role-email div,
+  .role-email div {
+    font-size: 14px;
+  }
+
+  /* CV — VERTICALE */
   .cv {
     font-size: 14px;
+    width: calc(100vw - 40px); /* tutta la larghezza reale */
+    max-width: none;          /* FONDAMENTALE */
   }
 
   .about {
@@ -95,18 +100,11 @@ body {
   }
 }
 
-/* -------- MOBILE VERTICALE: CV largo quanto lo schermo -------- */
-@media (hover: none) and (pointer: coarse) and (orientation: portrait) {
-  .cv {
-    max-width: none;
-    width: calc(100vw - 40px); /* schermo meno padding body */
-  }
-}
-
-/* -------- MOBILE ORIZZONTALE: CV circa metà schermo -------- */
+/* ------------------ MOBILE ORIZZONTALE ------------------ */
 @media (hover: none) and (pointer: coarse) and (orientation: landscape) {
+
   .cv {
+    width: calc(50vw - 40px); /* circa metà schermo */
     max-width: none;
-    width: 50vw;
   }
 }
