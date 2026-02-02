@@ -95,18 +95,18 @@ body {
   }
 }
 
-/* ------------------ MOBILE ORIENTAMENTO ------------------ */
-
-/* Mobile verticale: CV largo come lo schermo */
+/* -------- MOBILE VERTICALE: CV largo quanto lo schermo -------- */
 @media (hover: none) and (pointer: coarse) and (orientation: portrait) {
   .cv {
-    max-width: 100%;
+    max-width: none;
+    width: calc(100vw - 40px); /* schermo meno padding body */
   }
 }
 
-/* Mobile orizzontale: CV circa metà schermo */
+/* -------- MOBILE ORIZZONTALE: CV circa metà schermo -------- */
 @media (hover: none) and (pointer: coarse) and (orientation: landscape) {
   .cv {
-    max-width: 50vw;
+    max-width: none;
+    width: 50vw;
   }
 }
