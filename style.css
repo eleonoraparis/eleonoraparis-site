@@ -94,3 +94,19 @@ body {
     font-size: 13px;
   }
 }
+
+/* ------------------ MOBILE ORIENTAMENTO ------------------ */
+
+/* Mobile verticale: CV largo come lo schermo */
+@media (hover: none) and (pointer: coarse) and (orientation: portrait) {
+  .cv {
+    max-width: 100%;
+  }
+}
+
+/* Mobile orizzontale: CV circa metà schermo */
+@media (hover: none) and (pointer: coarse) and (orientation: landscape) {
+  .cv {
+    max-width: 50vw;
+  }
+}
