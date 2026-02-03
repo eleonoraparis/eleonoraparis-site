@@ -106,7 +106,7 @@ body {
   .container {
     max-width: 100%;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 20px;       /* bordi simmetrici */
     box-sizing: border-box;
     text-align: left;
   }
@@ -122,26 +122,31 @@ body {
   .role-email,
   .role-email div,
   .cv {
-    font-size: 12px !important;  /* !important per forzare override */
-    line-height: 1.2 !important;
+    font-size: 12px;       /* stesso del titolo */
+    line-height: 1.2;      /* stesso line-height desktop */
     margin: 0;
     padding: 0;
   }
 
+  /* CV piena larghezza */
   .cv {
     max-width: none;
     width: 100%;
   }
 
-  body {
-    background: white !important;
+  /* About posizionato */
+  .about {
+    bottom: 20px;
+    right: 20px;
+    font-size: 12px;
   }
 }
+
 
 /* ------------------ MEDIA TEST EXAMPLES ------------------ */
 @media (max-width: 767px) and (orientation: portrait) {
   body {
-    background: yellow !important;
+    background: white !important;
   }
 }
 
