@@ -74,7 +74,7 @@ body {
 @media (max-width: 767px) and (orientation: portrait) {
 
   body {
-    background: red; 
+    background: white; 
     padding: 20px; /* uniforme su tutti i lati */
   }
 
@@ -114,7 +114,7 @@ body {
 @media (max-width: 1024px) and (orientation: landscape) {
 
   body {
-    background: red;
+    background: white;
     padding: 20px;
   }
 
