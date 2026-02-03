@@ -62,11 +62,19 @@ body {
   font-family: 'Gotham', sans-serif;
 }
 
+/* ------------------ BLOCCO MOBILE PER TEXT-SIZE-ADJUST ------------------ */
+@media (max-width: 1024px) {
+  html, body {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+}
+
 /* ------------------ MOBILE PORTRAIT ------------------ */
 @media (max-width: 767px) and (orientation: portrait) {
 
   body {
-    background: yellow; 
+    background: red; 
     padding: 20px; /* uniforme su tutti i lati */
   }
 
@@ -106,7 +114,7 @@ body {
 @media (max-width: 1024px) and (orientation: landscape) {
 
   body {
-    background: blue;
+    background: red;
     padding: 20px;
   }
 
