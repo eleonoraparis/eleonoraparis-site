@@ -55,8 +55,8 @@ body {
 /* About */
 .about {
   position: fixed;
-  bottom: 30px;
-  right: 30px;
+  bottom: 40px;
+  right: 40px;
   font-size: 14px;
   cursor: pointer;
   font-family: 'Gotham', sans-serif;
@@ -70,11 +70,11 @@ body {
   }
 
   .container {
-    display: block;        /* niente flex */
+    display: block;        
     width: 100%;
-    max-width: 320px;      /* “pagina bianca” */
-    margin: 0;             /* forza in alto a sinistra */
-    text-align: left;      /* allineamento a sinistra */
+    max-width: 320px;      
+    margin: 0;             
+    text-align: left;      
   }
 
   .name {
@@ -86,6 +86,17 @@ body {
   .role-email div,
   .cv {
     font-size: 14px;
+  }
+
+  /* Aggiornamento per il terzo paragrafo */
+  .cv {
+    display: block;           /* Assicurati che sia visibile */
+    max-width: 100%;          /* Occupi tutta la larghezza disponibile */
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;               /* Nessun padding extra */
+    box-sizing: border-box;   /* Include padding/bordi nella larghezza */
   }
 
   .about {
