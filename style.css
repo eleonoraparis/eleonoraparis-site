@@ -66,7 +66,7 @@ body {
 @media (max-width: 767px) and (orientation: portrait) {
 
   body {
-    background: yellow !important; /* mantiene il colore di sfondo */
+    background: red; 
     padding: 20px; /* uniforme su tutti i lati */
   }
 
@@ -80,13 +80,11 @@ body {
   .name {
     font-size: 15px; /* stesso font in portrait e landscape */
     letter-spacing: 0.5px;
-    margin-bottom: 14px; /* distanza uniforme verticale */
   }
 
   .role-email div,
   .cv {
     font-size: 14px; /* stesso font in portrait e landscape */
-    margin-bottom: 14px; /* distanza uniforme verticale */
   }
 
   .cv {
@@ -98,8 +96,8 @@ body {
   }
 
   .about {
-    bottom: 14px; /* distanza uniforme dai bordi */
-    right: 14px;
+    bottom: 20px; /* distanza uniforme dai bordi */
+    right: 20px;
     font-size: 14px; /* stesso font in portrait e landscape */
   }
 }
@@ -108,7 +106,7 @@ body {
 @media (max-width: 1024px) and (orientation: landscape) {
 
   body {
-    background: yellow !important; /* mantiene il colore di sfondo */
+    background: yellow;
     padding: 20px; /* uniforme su tutti i lati */
   }
 
@@ -122,13 +120,11 @@ body {
   .name {
     font-size: 15px; /* identico a portrait */
     letter-spacing: 0.5px; /* identico a portrait */
-    margin-bottom: 14px; /* distanza uniforme verticale */
   }
 
   .role-email div,
   .cv {
     font-size: 14px; /* identico a portrait */
-    margin-bottom: 14px; /* distanza uniforme verticale */
   }
 
   .cv {
@@ -141,8 +137,8 @@ body {
   }
 
   .about {
-    bottom: 14px; /* distanza uniforme dai bordi */
-    right: 14px;
+    bottom: 20px; /* distanza uniforme dai bordi */
+    right: 20px;
     font-size: 14px; /* identico a portrait */
   }
 }
