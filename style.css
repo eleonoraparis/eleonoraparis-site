@@ -125,8 +125,8 @@ body {
     line-height: 1.4;
     text-align: left;
     max-width: none;       /* rimuove limiti desktop */
-    width: 100%;           /* usa tutta la larghezza della container */
-    margin: 0;             /* allineato con nome/email */
+    width: calc(100vw - 40px); /* tutta la larghezza reale */
+    max-width: none;          /* FONDAMENTALE */
   }
 }
 
