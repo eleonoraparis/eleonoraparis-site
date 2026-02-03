@@ -66,39 +66,41 @@ body {
 @media (max-width: 767px) and (orientation: portrait) {
 
   body {
-    background-color: white !important;
-    padding: 20px 20px 0 20px;
+    background: yellow !important; /* mantiene il colore di sfondo */
+    padding: 20px; /* uniforme su tutti i lati */
   }
 
   .container {
     max-width: 100%;
     margin: 0 auto;
-    padding: 20px 20px 0 20px;
+    padding: 0; /* padding già sul body */
+    text-align: left;
   }
 
   .name {
-    font-size: 15px;
-    margin-bottom: 1.6em;
+    font-size: 15px; /* stesso font in portrait e landscape */
     letter-spacing: 0.5px;
+    margin-bottom: 14px; /* distanza uniforme verticale */
   }
 
   .role-email div,
   .cv {
-    font-size: 14px;
+    font-size: 14px; /* stesso font in portrait e landscape */
+    margin-bottom: 14px; /* distanza uniforme verticale */
   }
 
   .cv {
     display: block;
     line-height: 1.4;
-    text-align: justify;
+    text-align: left;
     width: 100%;
     max-width: none;
   }
 
   .about {
-    bottom: 20px;
-    right: 20px;
-    font-size: 14px;
+    bottom: 14px; /* distanza uniforme dai bordi */
+    right: 14px;
+    font-size: 14px; /* stesso font in portrait e landscape */
   }
 }
 
@@ -106,50 +108,41 @@ body {
 @media (max-width: 1024px) and (orientation: landscape) {
 
   body {
-    background-color: white !important;
-    padding: 20px 20px 0 20px !important;
+    background: yellow !important; /* mantiene il colore di sfondo */
+    padding: 20px; /* uniforme su tutti i lati */
   }
 
   .container {
     max-width: 100%;
     margin: 0 auto;
-    padding: 20px 20px 0 20px !important;
+    padding: 0; /* padding già sul body */
+    text-align: left;
   }
 
   .name {
-    font-size: 15px;
-    letter-spacing: 0.5px !important;
-    margin-bottom: 1.6em;
+    font-size: 15px; /* identico a portrait */
+    letter-spacing: 0.5px; /* identico a portrait */
+    margin-bottom: 14px; /* distanza uniforme verticale */
   }
 
   .role-email div,
   .cv {
-    font-size: 14px;
+    font-size: 14px; /* identico a portrait */
+    margin-bottom: 14px; /* distanza uniforme verticale */
   }
 
   .cv {
     display: block;
     line-height: 1.4;
-    text-align: justify;
+    text-align: left;
     width: 100%;
     max-width: none;
     margin: 0;
   }
 
   .about {
-    bottom: 20px;
-    right: 20px;
-    font-size: 14px;
+    bottom: 14px; /* distanza uniforme dai bordi */
+    right: 14px;
+    font-size: 14px; /* identico a portrait */
   }
 }
-
-@media (max-width: 767px) and (orientation: portrait) {
-  body {
-    background: red !important;
-  }
-}
-
-@media (max-width: 1024px) and (orientation: landscape) {
-  body {
-    background: red !important;
-  }
