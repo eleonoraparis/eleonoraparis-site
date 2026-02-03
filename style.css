@@ -98,7 +98,7 @@ body {
   .cv {
     display: block;
     line-height: 1.4;
-    text-align: left;
+    text-align: justify;
     width: 100%;
     max-width: none;
   }
@@ -122,7 +122,7 @@ body {
     max-width: 100%;
     margin: 0;
     padding: 0;
-    text-align: left;
+    text-align: justify;
   }
 
   .name {
@@ -140,7 +140,7 @@ body {
     display: block;
     font-size: 14px;       /* FORZATO a 14 */
     line-height: 1.4;
-    text-align: left;
+    text-align: justify;
     width: 100%;
     max-width: none;       /* edge-to-edge reale */
     margin: 0;
