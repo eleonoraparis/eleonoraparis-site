@@ -117,13 +117,13 @@ body {
     margin-bottom: 1.6em;
   }
 
-  /* Descrizione + CV + ruolo/email */
+  /* Tutto il testo normale: descrizione, ruolo/email, CV */
   .details,
   .role-email,
   .role-email div,
   .cv {
-    font-size: 12px;
-    line-height: 1.2; /* stesso line-height desktop */
+    font-size: 12px !important;  /* !important per forzare override */
+    line-height: 1.2 !important;
     margin: 0;
     padding: 0;
   }
@@ -132,18 +132,22 @@ body {
     max-width: none;
     width: 100%;
   }
+
+  body {
+    background: white !important;
+  }
 }
 
 /* ------------------ MEDIA TEST EXAMPLES ------------------ */
 @media (max-width: 767px) and (orientation: portrait) {
   body {
-    background: red !important;
+    background: yellow !important;
   }
 }
 
 @media (max-width: 1024px) and (orientation: landscape) {
   body {
-    background: white !important;
+    background: red !important;
   }
 }
 
