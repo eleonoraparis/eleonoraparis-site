@@ -62,35 +62,83 @@ body {
   font-family: 'Gotham', sans-serif;
 }
 
-/* ------------------ MOBILE & TABLET (TOUCH REALI) ------------------ */
-@media (hover: none) and (pointer: coarse) {
+/* ------------------ MOBILE PORTRAIT ------------------ */
+@media (max-width: 767px) and (orientation: portrait) {
 
   body {
-    padding: 20px 20px 0 20px; /* 20px sopra, sx e dx, 0 sotto */
+    background-color: white !important;
+    padding: 20px 20px 0 20px;
   }
 
   .container {
-    display: block;        /* niente flex */
-    width: 100%;
-    max-width: 320px;      /* “pagina bianca” */
-    margin: 0;             /* forza in alto a sinistra */
-    text-align: left;      /* allineamento a sinistra */
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px 20px 0 20px;
   }
 
   .name {
     font-size: 15px;
     margin-bottom: 1.6em;
+    letter-spacing: 0.5px;
   }
 
-  .details,
   .role-email div,
   .cv {
     font-size: 14px;
   }
 
+  .cv {
+    display: block;
+    line-height: 1.4;
+    text-align: justify;
+    width: 100%;
+    max-width: none;
+  }
+
   .about {
     bottom: 20px;
     right: 20px;
-    font-size: 13px;
+    font-size: 14px;
+  }
+}
+
+/* ------------------ MOBILE LANDSCAPE ------------------ */
+@media (max-width: 1024px) and (orientation: landscape) {
+
+  body {
+    background-color: white !important;
+    padding: 20px 20px 0 20px !important;
+  }
+
+  .container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px 20px 0 20px !important;
+  }
+
+  .name {
+    font-size: 15px;
+    letter-spacing: 0.5px !important;
+    margin-bottom: 1.6em;
+  }
+
+  .role-email div,
+  .cv {
+    font-size: 14px;
+  }
+
+  .cv {
+    display: block;
+    line-height: 1.4;
+    text-align: justify;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+  }
+
+  .about {
+    bottom: 20px;
+    right: 20px;
+    font-size: 14px;
   }
 }
