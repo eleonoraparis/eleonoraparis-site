@@ -22,7 +22,7 @@ body {
   max-width: 600px;
 }
 
-/* Nome */
+/* Primo paragrafo: Nome */
 .name {
   font-size: 15px;
   letter-spacing: 1px;
@@ -30,11 +30,10 @@ body {
   margin-bottom: 1.6em;
 }
 
-/* Ruolo + email */
+/* Secondo paragrafo: Ruolo + email */
 .role-email {
   display: flex;
   flex-direction: column;
-  font-size: 14px;
   line-height: 1.2;
   margin-bottom: 1.6em;
 }
@@ -43,7 +42,7 @@ body {
   white-space: nowrap;
 }
 
-/* CV */
+/* Terzo paragrafo: CV */
 .cv {
   display: none;
   max-width: 600px;
@@ -56,103 +55,42 @@ body {
 /* About */
 .about {
   position: fixed;
-  bottom: 40px;
-  right: 40px;
+  bottom: 30px;
+  right: 30px;
   font-size: 14px;
   cursor: pointer;
   font-family: 'Gotham', sans-serif;
 }
 
-/* ------------------ MOBILE (TOUCH) ------------------ */
+/* ------------------ MOBILE & TABLET (TOUCH REALI) ------------------ */
 @media (hover: none) and (pointer: coarse) {
 
   body {
-    padding: 20px 20px 0 20px;
+    padding: 20px 20px 0 20px; /* 20px sopra, sx e dx, 0 sotto */
   }
 
   .container {
+    display: block;        /* niente flex */
     width: 100%;
-    max-width: 320px;   /* pagina bianca */
-    margin: 0;
-    text-align: left;
+    max-width: 320px;      /* “pagina bianca” */
+    margin: 0;             /* forza in alto a sinistra */
+    text-align: left;      /* allineamento a sinistra */
   }
 
   .name {
-    font-size: 13px;
+    font-size: 15px;
     margin-bottom: 1.6em;
   }
 
   .details,
-  .role-email div {
-    font-size: 12px;
-  }
-
-  /* CV — VERTICALE */
-  .cv {
-    font-size: 12px;
-    width: calc(100vw - 40px); /* tutta la larghezza reale */
-    max-width: none;          /* FONDAMENTALE */
-  }
-
-  .about {
-    bottom: 20px;
-    right: 20px;
-    font-size: 12px;
-  }
-}
-
-/* ------------------ MOBILE ORIZZONTALE ------------------ */
-@media (max-width: 1024px) and (orientation: landscape) {
-  .container {
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 0 20px;       /* bordi simmetrici */
-    box-sizing: border-box;
-    text-align: left;
-  }
-
-  /* Titolo */
-  .name {
-    font-size: 12px;
-    margin-bottom: 1.6em;
-  }
-
-  /* Tutto il testo normale: descrizione, ruolo/email, CV */
-  .details,
-  .role-email,
   .role-email div,
   .cv {
-    font-size: 12px;       /* stesso del titolo */
-    line-height: 1.2;      /* stesso line-height desktop */
-    margin: 0;
-    padding: 0;
+    font-size: 14px;
   }
 
-  /* CV piena larghezza */
-  .cv {
-    max-width: none;
-    width: 100%;
-  }
-
-  /* About posizionato */
   .about {
     bottom: 20px;
     right: 20px;
-    font-size: 12px;
+    font-size: 13px;
   }
 }
-
-
-/* ------------------ MEDIA TEST EXAMPLES ------------------ */
-@media (max-width: 767px) and (orientation: portrait) {
-  body {
-    background: white !important;
-  }
-}
-
-@media (max-width: 1024px) and (orientation: landscape) {
-  body {
-    background: red !important;
-  }
-}
-
