@@ -142,3 +142,14 @@ body {
     font-size: 14px;
   }
 }
+
+@media (max-width: 767px) and (orientation: portrait) {
+  body {
+    background: red !important;
+  }
+}
+
+@media (max-width: 1024px) and (orientation: landscape) {
+  body {
+    background: red !important;
+  }
