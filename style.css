@@ -101,10 +101,27 @@ body {
 }
 
 /* ------------------ MOBILE ORIZZONTALE ------------------ */
-@media (hover: none) and (pointer: coarse) and (orientation: landscape) {
+@media (max-width: 1024px) and (orientation: landscape) {
+  .container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 16px 16px 0 16px !important;
+  }
+
+  .name {
+    font-size: 12px;
+  }
+
+  .details {
+    font-size: 12px;
+  }
 
   .cv {
-    width: calc(50vw - 40px); /* circa metà schermo */
-    max-width: none;
+    font-size: 12px;
+    line-height: 1.4;
+    text-align: left;
+    max-width: none;       /* rimuove limiti desktop */
+    width: 100%;           /* usa tutta la larghezza della container */
+    margin: 0;             /* allineato con nome/email */
   }
 }
