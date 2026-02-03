@@ -114,8 +114,8 @@ body {
 @media (hover: none) and (max-width: 1024px) and (orientation: landscape) {
 
   body {
-    background: yellow;
-    padding: 40px 20px 20px 20px;
+    background: white;
+    padding: 30px 20px 20px 20px;
   }
 
   .container {
