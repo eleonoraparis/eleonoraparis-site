@@ -104,8 +104,10 @@ body {
 @media (max-width: 1024px) and (orientation: landscape) {
   .container {
     max-width: 100%;
-    margin: 0 auto;
-    padding: 16px 16px 0 16px !important;
+    margin: 0 auto;             /* centra il container */
+    padding: 0 20px;            /* bordi uguali dx/sx */
+    box-sizing: border-box;     /* include padding nella larghezza */
+    text-align: left;
   }
 
   .name {
@@ -123,5 +125,15 @@ body {
     max-width: none;       /* rimuove limiti desktop */
     width: 100%;           /* usa tutta la larghezza della container */
     margin: 0;             /* allineato con nome/email */
+
+@media (max-width: 767px) and (orientation: portrait) {
+  body {
+    background: red !important;
+  }
+}
+
+@media (max-width: 1024px) and (orientation: landscape) {
+  body {
+    background: white !important;
   }
 }
