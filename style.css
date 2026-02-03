@@ -1,144 +1,116 @@
 @font-face {
-  font-family: 'Gotham';
-  src: url('Gotham-Medium.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
+  font-family: 'OPTIAmericanGothic-Bold';
+  src: url('OPTIAmericanGothic-Bold.otf') format('opentype');
 }
 
-/* ------------------ BASE (DESKTOP) ------------------ */
-body {
+/* ------------------ BASE ------------------ */
+html, body {
   margin: 0;
   min-height: 100vh;
-  padding: 40px;
-  background-color: white;
+  background: white;
   color: black;
-  font-family: "Gotham", sans-serif;
-  font-size: 14px;
+  font-family: "OPTIAmericanGothic-Bold", sans-serif;
+  font-size: 10px;
   line-height: 1.2;
+
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+
+  overflow-x: visible; /* 🔥 IMPORTANTISSIMO */
+}
+
+* {
+  box-sizing: border-box;
 }
 
 .container {
-  text-align: left;
-  max-width: 600px;
+  max-width: 800px;
+  margin: 0;
+  padding: 40px;
 }
 
-/* Primo paragrafo: Nome */
+/* DESKTOP */
 .name {
-  font-size: 15px;
-  letter-spacing: 1px;
-  cursor: pointer;
+  font-size: 9.9px;
+  letter-spacing: 1.6px;
   margin-bottom: 1.6em;
 }
 
-/* Secondo paragrafo: Ruolo + email */
-.role-email {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.2;
+.details {
+  font-size: 10px;
+  letter-spacing: 1.6px;
   margin-bottom: 1.6em;
 }
 
-.role-email div {
-  white-space: nowrap;
-}
-
-/* Terzo paragrafo: CV */
 .cv {
-  display: none;
-  max-width: 600px;
-  width: 100%;
-  white-space: normal;
-  font-size: 14px;
-  line-height: 1.2;
-}
-
-/* About */
-.about {
-  position: fixed;
-  bottom: 40px;
-  right: 40px;
-  font-size: 14px;
-  cursor: pointer;
-  font-family: 'Gotham', sans-serif;
+  font-size: 10px;
+  letter-spacing: 1.6px;
+  line-height: 1.4;
+  max-width: 760px;
 }
 
 /* ------------------ MOBILE PORTRAIT ------------------ */
 @media (max-width: 767px) and (orientation: portrait) {
-
-  body {
-    background: red; 
-    padding: 20px; /* uniforme su tutti i lati */
-  }
-
   .container {
     max-width: 100%;
     margin: 0 auto;
-    padding: 0; /* padding già sul body */
-    text-align: left;
+    padding: 20px 20px 0 20px;
   }
 
   .name {
-    font-size: 15px; /* stesso font in portrait e landscape */
-    letter-spacing: 0.5px;
+    font-size: 6.4px;
   }
 
-  .role-email div,
-  .cv {
-    font-size: 14px; /* stesso font in portrait e landscape */
+  .details {
+    font-size: 6.5px;
   }
 
   .cv {
-    display: block;
+    font-size: 6.5px;
     line-height: 1.4;
-    text-align: left;
+    text-align: justify;
     width: 100%;
     max-width: none;
-  }
-
-  .about {
-    bottom: 20px; /* distanza uniforme dai bordi */
-    right: 20px;
-    font-size: 14px; /* stesso font in portrait e landscape */
   }
 }
 
 /* ------------------ MOBILE LANDSCAPE ------------------ */
 @media (max-width: 1024px) and (orientation: landscape) {
-
-  body {
-    background: yellow;
-    padding: 20px; /* uniforme su tutti i lati */
-  }
-
   .container {
     max-width: 100%;
     margin: 0 auto;
-    padding: 0; /* padding già sul body */
-    text-align: left;
+    padding: 16px 16px 0 16px !important;
   }
 
   .name {
-    font-size: 15px; /* identico a portrait */
-    letter-spacing: 0.5px; /* identico a portrait */
+    font-size: 15.9px;
+    letter-spacing: 1.6px !important;
   }
 
-  .role-email div,
-  .cv {
-    font-size: 14px; /* identico a portrait */
+  .details {
+    font-size: 16px;
+    letter-spacing: 1.6px !important;
   }
 
   .cv {
-    display: block;
+    font-size: 16px;
     line-height: 1.4;
-    text-align: left;
-    width: 100%;
-    max-width: none;
-    margin: 0;
+    text-align: justify;
+    letter-spacing: 1.6px !important;
+    max-width: none;       /* rimuove limiti desktop */
+    width: 100%;           /* usa tutta la larghezza della container */
+    margin: 0;             /* allineato con nome/email */
   }
+}
 
-  .about {
-    bottom: 20px; /* distanza uniforme dai bordi */
-    right: 20px;
-    font-size: 14px; /* identico a portrait */
+@media (max-width: 767px) and (orientation: portrait) {
+  body {
+    background: white !important;
+  }
+}
+
+@media (max-width: 1024px) and (orientation: landscape) {
+  body {
+    background: white !important;
   }
 }
