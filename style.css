@@ -71,7 +71,7 @@ body {
 }
 
 /* ------------------ MOBILE PORTRAIT ------------------ */
-@media (max-width: 767px) and (orientation: portrait) {
+@media (hover: none) and (max-width: 767px) and (orientation: portrait) {
 
   body {
     background: white; 
@@ -111,11 +111,11 @@ body {
 }
 
 /* ------------------ MOBILE LANDSCAPE ------------------ */
-@media (max-width: 1024px) and (orientation: landscape) {
+@media (hover: none) and (max-width: 1024px) and (orientation: landscape) {
 
   body {
-    background: white;
-    padding: 20px;
+    background: yellow;
+    padding: 40px 20px 20px 20px;
   }
 
   .container {
