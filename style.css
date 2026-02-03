@@ -104,27 +104,29 @@ body {
 @media (max-width: 1024px) and (orientation: landscape) {
   .container {
     max-width: 100%;
-    margin: 0 auto;             /* centra il container */
-    padding: 0 20px;            /* bordi uguali dx/sx */
-    box-sizing: border-box;     /* include padding nella larghezza */
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
     text-align: left;
   }
 
   .name {
-    font-size: 12px;
+    font-size: 12px;  /* titolo */
   }
 
-  .details {
-    font-size: 12px;
+  .details,
+  .role-email div,
+  .cv {
+    font-size: 12px;  /* descrizione e CV allineati */
+    line-height: 1.4; /* più leggibile */
   }
 
   .cv {
-    font-size: 12px;
-    line-height: 1.4;
-    text-align: left;
-    max-width: none;       /* rimuove limiti desktop */
-    width: 100%;           /* usa tutta la larghezza della container */
-    margin: 0;             /* allineato con nome/email */
+    max-width: none;
+    width: 100%;
+    margin: 0;
+  }
+}
 
 @media (max-width: 767px) and (orientation: portrait) {
   body {
